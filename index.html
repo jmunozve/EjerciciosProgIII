@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación 1 - Programación III</title>
+    <style>
+        /* Estilos modernos y corporativos */
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 90%;
+            max-width: 420px;
+            border-top: 5px solid #2c3e50;
+        }
+
+        .animal-banner {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 1.6rem;
+            margin: 0 0 0.5rem 0;
+        }
+
+        .subtitle {
+            color: #34495e;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        p {
+            color: #7f8c8d;
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 14px;
+            border: 2px solid #dfe6e9;
+            border-radius: 10px;
+            font-size: 1rem;
+            margin-bottom: 1.2rem;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        input[type="text"]:focus {
+            border-color: #3498db;
+            box-shadow: 0 0 8px rgba(52, 152, 219, 0.2);
+        }
+
+        button {
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            padding: 14px 30px;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: transform 0.2s, background 0.3s;
+        }
+
+        button:hover {
+            background-color: #34495e;
+            transform: translateY(-2px);
+        }
+
+        .footer-info {
+            margin-top: 2rem;
+            font-size: 0.8rem;
+            color: #7f8c8d;
+            text-align: center;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="subtitle">UNETI - Trayecto III</div>
+        <!-- Imagen de fauna para el contexto del ejercicio -->
+        <img src="https://images.unsplash.com/photo-1474511320723-9a56873867b5?q=80&w=500&auto=format&fit=crop" 
+             alt="Fauna Silvestre" class="animal-banner">
+        
+        <h1>Programación III</h1>
+        <p>Ejercicio 1: Interceptación de datos con Node.js</p>
+
+        <form action="/mostrar" method="POST">
+            <input type="text" name="animal" placeholder="Escribe tu animal favorito..." required>
+            <button type="submit">Procesar en Servidor</button>
+        </form>
+    </div>
+
+    <div class="footer-info">
+        <strong>Unidad Curricular:</strong> Programación III<br>
+        <strong>Evaluación:</strong> 25% Ponderación
+    </div>
+
+</body>
+</html>
