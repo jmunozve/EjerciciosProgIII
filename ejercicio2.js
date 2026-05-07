@@ -1,10 +1,12 @@
 "use strict";
-/**
+/*
  * EVALUACIÓN - UNETI
  * Unidad Curricular: Programación III
  * Ejercicio 2: Enumeraciones con TypeScript
  */
-// 1. Definición de Enumeraciones para Géneros de Películas
+// Comencé definiendo esta enumeración para los géneros de las películas
+// porque me permite restringir los valores a categorías específicas,
+// asegurando que no existan errores de escritura al asignar los datos.
 var GeneroPelicula;
 (function (GeneroPelicula) {
     GeneroPelicula["Accion"] = "Acci\u00F3n";
@@ -14,7 +16,9 @@ var GeneroPelicula;
     GeneroPelicula["Terror"] = "Terror";
     GeneroPelicula["Documental"] = "Documental";
 })(GeneroPelicula || (GeneroPelicula = {}));
-// 2. Definición de Enumeraciones para Países de Origen
+// De la misma manera establecí una enumeración para los países de origen,
+// lo cual me ayuda a estandarizar la procedencia de cada film y facilita
+// el manejo de la información geográfica dentro de mi programa.
 var PaisPelicula;
 (function (PaisPelicula) {
     PaisPelicula["Venezuela"] = "Venezuela";
@@ -24,11 +28,16 @@ var PaisPelicula;
     PaisPelicula["Argentina"] = "Argentina";
     PaisPelicula["Francia"] = "Francia";
 })(PaisPelicula || (PaisPelicula = {}));
-// 4. Función para mostrar los datos de forma atractiva
+// Desarrollé esta función con la intención de automatizar la salida de
+// datos por consola, dándole un formato visualmente ordenado que
+// incluye separadores y un encabezado claro para la cartelera.
 function mostrarCartelera(peliculas) {
     console.log("==========================================");
-    console.log("       CARTELERA DE CINE - UNETI         ");
+    console.log("       CARTELERA DE CINE - UNETI          ");
     console.log("==========================================");
+    // Implementé un ciclo que recorre el arreglo de películas para
+    // mostrar cada propiedad junto con un índice incremental, permitiendo
+    // una lectura más fluida de cada elemento registrado.
     peliculas.forEach((peli, index) => {
         console.log(`${index + 1}. TÍTULO: ${peli.titulo}`);
         console.log(`   GÉNERO: ${peli.genero}`);
@@ -36,7 +45,9 @@ function mostrarCartelera(peliculas) {
         console.log("------------------------------------------");
     });
 }
-// 5. Creación de datos de ejemplo
+// Para validar mi código creé este arreglo de prueba donde integré
+// ejemplos variados, incluyendo una producción nacional y otras
+// internacionales para comprobar que las enumeraciones responden bien.
 const misPeliculas = [
     {
         titulo: "El Silbón",
@@ -54,5 +65,6 @@ const misPeliculas = [
         pais: PaisPelicula.Argentina
     }
 ];
-// 6. Ejecución del programa
+// Finalmente hago el llamado a la función pasando mi lista de películas
+// para visualizar el resultado final de la ejecución en la terminal.
 mostrarCartelera(misPeliculas);

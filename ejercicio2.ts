@@ -1,4 +1,8 @@
-
+/*
+ * EVALUACIÓN - UNETI
+ * Unidad Curricular: Programación III
+ * Ejercicio 2: Enumeraciones con TypeScript
+ */
 
 // Comencé definiendo esta enumeración para los géneros de las películas
 // porque me permite restringir los valores a categorías específicas,
@@ -35,7 +39,7 @@ interface PeliculaInfo {
 
 // Desarrollé esta función con la intención de automatizar la salida de
 // datos por consola, dándole un formato visualmente ordenado que
-// incluya separadores y un encabezado claro para la cartelera.
+// incluye separadores y un encabezado claro para la cartelera.
 function mostrarCartelera(peliculas: PeliculaInfo[]): void {
     console.log("==========================================");
     console.log("       CARTELERA DE CINE - UNETI          ");
