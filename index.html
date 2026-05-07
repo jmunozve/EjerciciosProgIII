@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
+<!-- El inicio del documento establece la configuración esencial para que los caracteres 
+     especiales se visualicen correctamente y la página sea adaptable a móviles. -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Evaluación 1 - Programación III</title>
+    
     <style>
-        /* Estilos modernos y corporativos */
+        /* Para el diseño general, seleccioné un degradado moderno y utilicé flexbox. 
+           Mi intención es que el contenido se mantenga siempre centrado, ofreciendo 
+           una visual limpia y equilibrada en cualquier monitor. */
         body {
             font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
@@ -17,6 +22,9 @@
             margin: 0;
         }
 
+        /* Diseñé la tarjeta central con una sombra sutil y bordes redondeados. 
+           Este bloque funciona como el marco principal de la actividad, 
+           separando claramente el contenido académico del fondo. */
         .card {
             background: #ffffff;
             padding: 2.5rem;
@@ -28,6 +36,9 @@
             border-top: 5px solid #2c3e50;
         }
 
+        /* Configuré esta imagen de cabecera para que se ajuste perfectamente 
+           al ancho de la tarjeta. Sirve como un refuerzo visual para el tema 
+           de la fauna silvestre que se maneja en el ejercicio. */
         .animal-banner {
             width: 100%;
             height: 180px;
@@ -58,6 +69,9 @@
             margin-bottom: 2rem;
         }
 
+        /* Para la entrada de texto, establecí un diseño intuitivo con transiciones. 
+           Al hacer clic en el campo, el borde cambia de color para confirmar al 
+           usuario que el sistema está listo para recibir el nombre del animal. */
         input[type="text"] {
             width: 100%;
             box-sizing: border-box;
@@ -75,6 +89,9 @@
             box-shadow: 0 0 8px rgba(52, 152, 219, 0.2);
         }
 
+        /* El botón de envío incluye una pequeña animación de movimiento al pasar 
+           el ratón. Esta es una lógica visual que programé para mejorar la interactividad 
+           antes de enviar la petición al servidor. */
         button {
             background-color: #2c3e50;
             color: white;
@@ -106,23 +123,27 @@
 
     <div class="card">
         <div class="subtitle">UNETI - Trayecto III</div>
-        <!-- Imagen de fauna para el contexto del ejercicio -->
+        
+        <!-- Esta imagen externa ayuda a darle un contexto estético al formulario. -->
         <img src="https://images.unsplash.com/photo-1474511320723-9a56873867b5?q=80&w=500&auto=format&fit=crop" 
              alt="Fauna Silvestre" class="animal-banner">
         
         <h1>Programación III</h1>
         <p>Ejercicio 1: Interceptación de datos con Node.js</p>
 
+        <!-- Este formulario es el núcleo de la actividad. Definí el método POST 
+             y la acción hacia '/mostrar' para que los datos sean capturados y 
+             procesados por el servidor dinámico que desarrollamos. -->
         <form action="/mostrar" method="POST">
             <input type="text" name="animal" placeholder="Escribe tu animal favorito..." required>
             <button type="submit">Procesar en Servidor</button>
         </form>
     </div>
 
+    <!-- Sección de créditos y datos de la evaluación solicitados por el docente. -->
     <div class="footer-info">
         <strong>Unidad Curricular:</strong> Programación III<br>
-        <strong>Evaluación:</strong> 25% Ponderación
-    </div>
+nd    </div>
 
 </body>
 </html>

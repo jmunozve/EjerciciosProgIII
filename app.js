@@ -2,22 +2,28 @@ const express = require('express');
 const app = express();
 const path = require('path');
 
-// Configuración para procesar los datos enviados desde el formulario HTML
+// Esta configuración la incluí para que mi servidor tenga la capacidad de interpretar 
+// y extraer los datos que el usuario envía a través de los campos del formulario.
 app.use(express.urlencoded({ extended: true }));
 
-// 1. RUTA PRINCIPAL (Carga la interfaz visual)
+// La ruta principal que programé se encarga de servir mi archivo de interfaz. 
+// Utilicé una ruta absoluta hacia mi directorio de trabajo para asegurar que 
+// el servidor localice el archivo index.html correctamente en mi sistema.
 app.get('/', (req, res) => {
-    // Usamos la ruta física exacta de tu proyecto en el disco F:
     const rutaArchivo = 'F:/A-UNIVERSIDADES/A-UNETI/III TRAYECTO/PROGRAMACION III/Ejercicio 1/index.html';
     res.sendFile(path.resolve(rutaArchivo));
 });
 
-// 2. RUTA DE INTERCEPTACIÓN (Procesa el animal y recarga la vista)
+// En este bloque desarrollé la lógica de interceptación. Mi objetivo aquí es recibir 
+// el dato del "animal" y construir en tiempo real una nueva página HTML. 
+// Programé los estilos CSS directamente en la respuesta para que el resultado 
+// se vea profesional y organizado dentro de una tarjeta visual.
 app.post('/mostrar', (req, res) => {
-    // Interceptamos el nombre enviado desde el input "animal"
+    // Aquí capturo el valor específico que viaja en el cuerpo de la petición.
     const animalFavorito = req.body.animal;
     
-    // Generamos y enviamos la nueva página HTML con el resultado
+    // La respuesta que diseñé utiliza plantillas de cadena para insertar el 
+    // animal seleccionado dentro de la estructura HTML que construí.
     res.send(`
         <!DOCTYPE html>
         <html lang="es">
@@ -80,7 +86,9 @@ app.post('/mostrar', (req, res) => {
     `);
 });
 
-// 3. INICIO DEL SERVIDOR
+// El cierre de mi código establece el puerto de escucha y define una serie de 
+// mensajes informativos en la consola que me ayudan a confirmar que el servidor 
+// de la UNETI está operando y listo para recibir conexiones.
 const PUERTO = 3000;
 app.listen(PUERTO, () => {
     console.log('==============================================');
